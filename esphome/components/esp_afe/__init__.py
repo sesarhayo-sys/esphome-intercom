@@ -225,7 +225,7 @@ async def to_code(config):
 
     if config[CONF_MIC_NUM] <= 1:
         cg.add_define("USE_ESP_AFE_DIRECT_PATH")
-        add_idf_component(name="espressif/esp-sr", ref="^2.4.4")
+        add_idf_component(name="espressif/esp-sr", ref="2.4.7")
     if config[CONF_MIC_NUM] >= 2:
         cg.add_define("USE_ESP_AFE_GMF_PATH")
         # gmf_ai_audio provides Espressif's canonical AFE manager
